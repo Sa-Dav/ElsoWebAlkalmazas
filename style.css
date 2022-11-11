@@ -1,0 +1,61 @@
+body {
+    height: 1800px;
+    width: 1500px;
+    border: solid blue 2px;
+
+}
+.gray-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainpic {
+    height: 400px;
+    width: 1000px;
+    border: solid red 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#photo {
+    height: 500px;
+    width: 800px;   
+}
+.box {
+    height: 100px;
+    width: 100px;  
+    border: solid red 2px; 
+    margin: 5px;
+}
+
+.photo2 {
+    height: 100px;
+    width: 100px;  
+}
+.arrow {
+    height: 100px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow.rev {
+    transform: rotate(0.5turn); 
+}
+.arrow { 
+    
+}
+#ThumbnailContainer {
+
+    border: solid red 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+li {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    list-style-type: none;
+}
