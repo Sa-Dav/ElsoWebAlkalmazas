@@ -50,11 +50,14 @@ let data1 = {
   let currentPhoto = 0;
 let imagesData = [data1, data2, data3, data4, data5, data6, data7, data8];
 $('#photo').attr('src', imagesData[currentPhoto].photo);
+$('#photo-title').attr('src', imagesData[currentPhoto].title);
+$('#photo-description').attr('src', imagesData[currentPhoto].description);
 
 let loadPhoto = (photoNumber) => {
-    $('#photo').attr('src', imagesData[photoNumber].photo);}
-    loadPhoto(currentPhoto);
-
+    $('#photo-title').attr('src', imagesData[currentPhoto].title);
+    $('#photo-description').attr('src', imagesData[currentPhoto].description);
+    $('#photo').attr('src', imagesData[photoNumber].photo);
+  }
 $('.arrow.rev').click(() => {
   currentPhoto++;
   if(currentPhoto < 8) { 
@@ -78,10 +81,12 @@ $('.arrow.normal').click(() => {
 imagesData.forEach((item, index) => {
   $('#ThumbnailContainer').append(`<div class="box" data-index="${index}">
   <img class="photo2 ${index}">
-  <h1 id="photo-title${index}"></h1>
-  <p id="photo-description${index}"></p>
+  <h1 class="photo-title ${index}"></h1>
+  <p class="photo-description ${index}"></p>
   </div>`);
-  $(`.photo2.${index}`).attr('src', imagesData[index].photo);
+$(`.photo-title.${index}`).text(imagesData[index].title);
+$(`.photo-description.${index}`).text(imagesData[index].description);
+$(`.photo2.${index}`).attr('src', imagesData[index].photo);
 })
 
 $('.box').click((event) => {
