@@ -1,8 +1,13 @@
+html {
+    width: 1450px;
+    height: 900px;
+}
 body {
-    height: 1800px;
-    width: 1500px;
-    border: solid blue 2px;
-    background-image: url('pictures/fancy-cushion.webp');
+    margin-top: 50px;
+    height: 900px;
+    width: 1450px;
+    background-color: white;
+    /*background: linear-gradient(135deg, #007f5f, #ffff3f);*/
 
 
 }
@@ -14,20 +19,26 @@ body {
 .mainpic {
     height: 400px;
     width: 1000px;
-    border: solid red 2px;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 #photo {
     height: 500px;
-    width: 800px;   
+    width: 800px; 
+
+  
+
+
+    
 }
 .box {
     height: 100px;
     width: 100px;  
-    border: solid red 2px; 
-    margin: 5px;
+
+    margin: 20px;
+    
 }
 
 .photo2 {
@@ -35,28 +46,35 @@ body {
     width: 100px;  
 }
 .arrow {
-    height: 100px;
-    width: 50px;
+    margin-right: 100px;
+    padding: 0 20px;
+    height: 500px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50px 50px 50px 50px;
+    background-color: whitesmoke;
+    opacity: 0.6;
 }
 .arrow.rev {
-    transform: rotate(0.5turn); 
+    transform: rotate(0.5turn);
+    margin-left: 100px;
 }
-.arrow { 
+.arrow:hover {
+    opacity: 0.2;
     
 }
+
 #ThumbnailContainer {
 
-    border: solid red 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin: 100px 0 0 -100px;
 }
 li {
-    background-color: red;
+
     height: 100px;
     width: 100px;
     list-style-type: none;
