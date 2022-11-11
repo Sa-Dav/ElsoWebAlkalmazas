@@ -2,6 +2,8 @@ body {
     height: 1800px;
     width: 1500px;
     border: solid blue 2px;
+    background-image: url('pictures/fancy-cushion.webp');
+
 
 }
 .gray-container {
@@ -82,3 +84,4 @@ li {
     display: block;
     content: attr(photo-description);
   }
+
