@@ -6,18 +6,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<p id="PhotoPlace"></p>
 <div class="gray-container">
-  <img class="arrow normal" src="pictures/arrow.svg" alt="">
-  <img id="photo">
-  <h1 id="photo-title"></h1>
-  <p id="photo-description"></p>
-  <img class="arrow rev" src="pictures/arrow.svg" alt="">
+  <div class="left">
+    <img class="arrow normal" src="pictures/arrow.svg" alt="">
+  </div>
+  <div class="main">
+    <img id="photo">
+    <h1 id="photo-title"></h1>
+    <p id="photo-description"></p>
+    <div class="inside">
+      <h1 class="insideh"></h1>
+      <p class="insidep"></p>
+    </div>
+  </div>
+  <div class="right">
+    <img class="arrow rev" src="pictures/arrow.svg" alt="">
+  </div>
+
 </div>
 
-<div id="ThumbnailContainer">
+
 
 </div>
+<div id="ThumbnailContainer"></div>
 <h1>Clicked: <span id="clicked"></span></h1>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

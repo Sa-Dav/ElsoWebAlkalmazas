@@ -60,20 +60,24 @@ let loadPhoto = (photoNumber) => {
   }
 $('.arrow.rev').click(() => {
   currentPhoto++;
+  $('#PhotoPlace').text(currentPhoto);
   if(currentPhoto < 8) { 
     loadPhoto(currentPhoto); }
     else {
         currentPhoto = 0;
+        $('#PhotoPlace').text(currentPhoto);
         loadPhoto(currentPhoto);
     }
   })
 
 $('.arrow.normal').click(() => {
     --currentPhoto;
+    $('#PhotoPlace').text(currentPhoto);
     if(-1 < currentPhoto) { 
       loadPhoto(currentPhoto); }
       else {
           currentPhoto = 7;
+          $('#PhotoPlace').text(currentPhoto);
           loadPhoto(currentPhoto);
       }
     })
@@ -91,11 +95,13 @@ $(`.photo2.${index}`).attr('src', imagesData[index].photo);
 
 $('.box').click((event) => {
   let indexClicked = $(event.currentTarget).attr('data-index');
-  
+  let indexphoto = $(event.currentTarget).text('photo-title'); ******
+  console.log(indexphoto)
   $('#clicked').text(indexClicked)
   loadPhoto(indexClicked);
   currentPhoto = indexClicked;
-
+****
+  $('#PhotoPlace').text(currentPhoto);
 
   if (currentPhoto == 0) {
     $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
@@ -124,11 +130,8 @@ $('.box').click((event) => {
   } 
 });
 
-$(`currentPhoto`).change(function () {
-  console.log(2432423423)
-})
 
-$(document).on("click",'currentPhoto', function(){
-  console.log(24324234223)
-})
 
+$("#PhotoPlace").on('contentchanged', function() {
+  console.log("HELLO WORLD!");
+});

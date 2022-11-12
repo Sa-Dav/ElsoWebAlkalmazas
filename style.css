@@ -1,11 +1,11 @@
 html {
-    width: 1450px;
-    height: 900px;
+    height: 100%;
+    width: 100%;
 }
 body {
     margin-top: 50px;
-    height: 900px;
-    width: 1450px;
+    height: 100%;
+    width: 100%;
     background-color: white;
     /*background: linear-gradient(135deg, #007f5f, #ffff3f);*/
 
@@ -15,23 +15,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+
+    
 }
-.mainpic {
-    height: 400px;
-    width: 1000px;
+.main {
+    height: 500px;
+    width: 800px; 
 
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border: solid red 2px;
+    position: relative;
+
 }
 #photo {
     height: 500px;
+    width: 800px;  
+}
+.middle {
+
+    height: 500px;
     width: 800px; 
-
-  
-
-
-    
+    border: solid green 2px;
 }
 .box {
     height: 100px;
@@ -43,9 +50,11 @@ body {
 
 .photo2 {
     height: 100px;
-    width: 100px;  
+    width: 100px; 
+     
 }
 .arrow {
+    position: absolute;
     margin-right: 100px;
     padding: 0 20px;
     height: 500px;
@@ -57,9 +66,30 @@ body {
     background-color: whitesmoke;
     opacity: 0.6;
 }
+.left {
+    margin-right: 100px;
+    padding: 0 20px;
+    height: 500px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:solid red 2px;
+}
+.right {
+    margin-left: 100px;
+    margin-right: 0;
+    padding: 0 20px;
+    height: 500px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:solid red 2px;
+}
 .arrow.rev {
     transform: rotate(0.5turn);
-    margin-left: 100px;
+
 }
 .arrow:hover {
     opacity: 0.2;
@@ -72,6 +102,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 100px 0 0 -100px;
+    bottom: 00px;
 }
 li {
 
@@ -103,3 +134,11 @@ li {
     content: attr(photo-description);
   }
 
+.inside {
+    height: 150px;
+    width: 100%;
+    border: solid green 2px;
+    position: absolute;
+    bottom: 0;
+
+}
