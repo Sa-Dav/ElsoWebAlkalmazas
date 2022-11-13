@@ -62,23 +62,77 @@ $('.arrow.rev').click(() => {
   currentPhoto++;
   $('#PhotoPlace').text(currentPhoto);
   if(currentPhoto < 8) { 
-    loadPhoto(currentPhoto); }
-    else {
+    loadPhoto(currentPhoto);
+  } if (currentPhoto == 0) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(255, 179, 57), 	rgb(165, 109, 32)');
+  } else if (currentPhoto == 1) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(143, 97, 61), -79px -50px 500px -29px 	rgb(108, 106, 31)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(143, 97, 61), 	rgb(108, 106, 31)');
+  } else if (currentPhoto == 2) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(106, 151, 148), -79px -50px 500px -29px 	rgb(169, 115, 15)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(106, 151, 148), 	rgb(169, 115, 15)');
+  } else if (currentPhoto == 3) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(210, 159, 68), -79px -50px 500px -29px 	rgb(223, 222, 201)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(210, 159, 68), 	rgb(223, 222, 201)');
+  } else if (currentPhoto == 4) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px DarkSlateGrey, -79px -50px 500px -29px 	rgb(84, 99, 80)');
+    $('body').css('background', 'linear-gradient(135deg, DarkSlateGrey, 	rgb(84, 99, 80)');
+  } else if (currentPhoto == 5) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(132, 96, 80), -79px -50px 500px -29px 	rgb(136, 164, 201)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(132, 96, 80), 	rgb(136, 164, 201)');
+  } else if (currentPhoto == 6) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(97, 107, 116), -79px -50px 500px -29px 	rgb(196, 151, 122)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(97, 107, 116), 	rgb(196, 151, 122)');
+  } else if (currentPhoto == 7) {
+    $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(206, 180, 93), -79px -50px 500px -29px 	rgb(122, 103, 61)');
+    $('body').css('background', 'linear-gradient(135deg, rgb(206, 180, 93), 	rgb(122, 103, 61)');
+  } 
+  else {
         currentPhoto = 0;
         $('#PhotoPlace').text(currentPhoto);
         loadPhoto(currentPhoto);
-    }
+        $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
+        $('body').css('background', 'linear-gradient(135deg, rgb(255, 179, 57), 	rgb(165, 109, 32)');
+    } 
   })
 
 $('.arrow.normal').click(() => {
     --currentPhoto;
     $('#PhotoPlace').text(currentPhoto);
     if(-1 < currentPhoto) { 
-      loadPhoto(currentPhoto); }
+      loadPhoto(currentPhoto); 
+    } if (currentPhoto == 0) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(255, 179, 57), 	rgb(165, 109, 32)');
+    } else if (currentPhoto == 1) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(143, 97, 61), -79px -50px 500px -29px 	rgb(108, 106, 31)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(143, 97, 61), 	rgb(108, 106, 31)');
+    } else if (currentPhoto == 2) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(106, 151, 148), -79px -50px 500px -29px 	rgb(169, 115, 15)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(106, 151, 148), 	rgb(169, 115, 15)');
+    } else if (currentPhoto == 3) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(210, 159, 68), -79px -50px 500px -29px 	rgb(223, 222, 201)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(210, 159, 68), 	rgb(223, 222, 201)');
+    } else if (currentPhoto == 4) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px DarkSlateGrey, -79px -50px 500px -29px 	rgb(84, 99, 80)');
+      $('body').css('background', 'linear-gradient(135deg, DarkSlateGrey, 	rgb(84, 99, 80)');
+    } else if (currentPhoto == 5) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(132, 96, 80), -79px -50px 500px -29px 	rgb(136, 164, 201)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(132, 96, 80), 	rgb(136, 164, 201)');
+    } else if (currentPhoto == 6) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(97, 107, 116), -79px -50px 500px -29px 	rgb(196, 151, 122)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(97, 107, 116), 	rgb(196, 151, 122)');
+    } else if (currentPhoto == 7) {
+      $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(206, 180, 93), -79px -50px 500px -29px 	rgb(122, 103, 61)');
+      $('body').css('background', 'linear-gradient(135deg, rgb(206, 180, 93), 	rgb(122, 103, 61)');
+    } 
       else {
           currentPhoto = 7;
           $('#PhotoPlace').text(currentPhoto);
           loadPhoto(currentPhoto);
+          $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(206, 180, 93), -79px -50px 500px -29px 	rgb(122, 103, 61)');
+          $('body').css('background', 'linear-gradient(135deg, rgb(206, 180, 93), 	rgb(122, 103, 61)');
       }
     })
 
@@ -93,14 +147,24 @@ $(`.photo-description.${index}`).text(imagesData[index].description);
 $(`.photo2.${index}`).attr('src', imagesData[index].photo);
 })
 
+$('.photo2').click((event) => {
+
+});
+
 $('.box').click((event) => {
   let indexClicked = $(event.currentTarget).attr('data-index');
-  let indexphoto = $(event.currentTarget).text('photo-title'); ******
-  console.log(indexphoto)
+  let afaegaeg = $('event.currentTarget[class][photo-description]').text();
+  //let afaegaeg = $(event.target.photo-description).text();
+  console.log(afaegaeg)
+  $('.inside.h').text(afaegaeg)
+
+
+  console.log(indexClicked)
   $('#clicked').text(indexClicked)
+
   loadPhoto(indexClicked);
   currentPhoto = indexClicked;
-****
+
   $('#PhotoPlace').text(currentPhoto);
 
   if (currentPhoto == 0) {
