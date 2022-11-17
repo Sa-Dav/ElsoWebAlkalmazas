@@ -148,24 +148,25 @@ $(`.photo2.${index}`).attr('src', imagesData[index].photo);
 })
 
 $('.photo2').click((event) => {
-
 });
+
+
+/*$(document).on("click",'.box', function(){
+  console.log(this)
+  let proba = $(this).find(`.photo-description`).text();
+  console.log(proba)
+});*/
+
 
 $('.box').click((event) => {
   let indexClicked = $(event.currentTarget).attr('data-index');
-  let afaegaeg = $('event.currentTarget[class][photo-description]').text();
-  //let afaegaeg = $(event.target.photo-description).text();
-  console.log(afaegaeg)
-  $('.inside.h').text(afaegaeg)
-
-
-  console.log(indexClicked)
-  $('#clicked').text(indexClicked)
+  let PTitle = $(event.currentTarget).find(`.photo-title`).text();
+  let PDescription = $(event.currentTarget).find(`.photo-description`).text();
+  $('.inside.h').text(PTitle)
+  $('.inside.p').text(PDescription)
 
   loadPhoto(indexClicked);
   currentPhoto = indexClicked;
-
-  $('#PhotoPlace').text(currentPhoto);
 
   if (currentPhoto == 0) {
     $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
@@ -199,3 +200,9 @@ $('.box').click((event) => {
 $("#PhotoPlace").on('contentchanged', function() {
   console.log("HELLO WORLD!");
 });
+
+function valtozas() {
+  currentPhoto++
+  console.log(currentPhoto)
+}
+setTimeout('valtozas', 3000);
