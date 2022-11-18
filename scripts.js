@@ -1,49 +1,49 @@
 let data1 = {
     photo: 'pictures/pavan-prasad-JZf_0apzhL8-unsplash.jpg',
     title: 'Bird',
-    description: 'Flying bird'
+    description: 'This is the description of the first picture. This is the description of the first picture. This is the description of the first picture.'
   };
 
   let data2 = {
     photo: 'pictures/2h-media-M1WNQu_4uH8-unsplash.jpg',
     title: 'Boar',
-    description: 'Standing boar'
+    description: 'This is the description of the second picture. This is the description of the second picture. This is the description of the second picture.'
   };
 
   let data3 = {
     photo: 'pictures/alex-trajilovic-br26jsOEZ9s-unsplash.jpg',
     title: 'Lake',
-    description: 'Lake with nature'
+    description: 'This is the description of the third picture. This is the description of the third picture. This is the description of the third picture.'
   };
   
   let data4 = {
     photo: 'pictures/farid-mardanov-UF7S8kzA-Aw-unsplash.jpg',
     title: 'Desert',
-    description: 'Sand storm'
+    description: 'This is the description of the fourth picture. This is the description of the fourth picture. This is the description of the fourth picture.'
   };
 
   let data5 = {
     photo: 'pictures/hassan-pasha-pvicQv9Sfk8-unsplash.jpg',
-    title: 'Bird',
-    description: 'Grey bird'
+    title: 'Pigeon',
+    description: 'This is the description of the fifth picture. This is the description of the fifth picture. This is the description of the fifth picture.'
   };
 
   let data6 = {
     photo: 'pictures/martin-pedersen-Bho2PAOrWLw-unsplash.jpg',
-    title: 'Snow',
-    description: 'Snowy mountain peak'
+    title: 'Mountain',
+    description: 'This is the description of the sixth picture. This is the description of the sixth picture. This is the description of the sixth picture.'
   };
 
   let data7 = {
     photo: 'pictures/op23-a5uLuYTnnY4-unsplash.jpg',
     title: 'Sea',
-    description: 'Desert plus sea'
+    description: 'This is the description of the seventh picture. This is the description of the seventh picture. This is the description of the seventh picture.'
   };
 
   let data8 = {
     photo: 'pictures/pavan-prasad-nw1slFnKRYE-unsplash.jpg',
-    title: 'Animal',
-    description: 'Animal nature'
+    title: 'Lizard',
+    description: 'This is the description of the eighth picture. This is the description of the eighth picture. This is the description of the eighth picture.'
   };
 
   let currentPhoto = 0;
@@ -86,6 +86,7 @@ imagesData.forEach((item, index) => {
 $(`.photo-title.${index}`).text(imagesData[index].title);
 $(`.photo-description.${index}`).text(imagesData[index].description);
 $(`.photo2.${index}`).attr('src', imagesData[index].photo);
+$(`.box.${currentPhoto}`).addClass('active');
 });
 
 $('.box').click((event) => {
@@ -95,11 +96,14 @@ $('.box').click((event) => {
 });
 
 
-
-
+  /*-------------------------Személyre szabott háttér-------------------------*/
+$('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
+$('html').css('background', 'linear-gradient(135deg, rgb(255, 179, 57), 	rgb(165, 109, 32)');
+  /*-------------------------Személyre szabott háttér vége-------------------------*/
 $(document).on("click", function(){
   let PTitle = $('.box').find(`.photo-title.${currentPhoto}`).text();
   let PDescription = $('.box').find(`.photo-description.${currentPhoto}`).text();
+  /*-------------------------Személyre szabott háttér-------------------------*/
   if (currentPhoto == 0) {
     $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(255, 179, 57), -79px -50px 500px -29px 	rgb(165, 109, 32)');
     $('html').css('background', 'linear-gradient(135deg, rgb(255, 179, 57), 	rgb(165, 109, 32)');
@@ -125,6 +129,7 @@ $(document).on("click", function(){
     $('#photo').css('box-shadow', '79px 50px 500px -29px rgb(206, 180, 93), -79px -50px 500px -29px 	rgb(122, 103, 61)');
     $('html').css('background', 'linear-gradient(135deg, rgb(206, 180, 93), 	rgb(122, 103, 61)');
   }     
+  /*-------------------------Személyre szabott háttér vége-------------------------*/
   $('#photo-title').attr('title', PTitle);
   $('#photo-description').attr('title', PDescription);
   $('.inside.h').text(PTitle)
